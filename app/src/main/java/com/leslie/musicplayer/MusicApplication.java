@@ -1,0 +1,35 @@
+package com.leslie.musicplayer;
+
+import android.app.Application;
+import android.content.Context;
+
+/**
+ * Created by yuxuehai on 18-7-24.
+ */
+
+public class MusicApplication extends Application {
+
+    private static final String TAG = "MusicApplication";
+
+    private static Context sContext;
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        init();
+    }
+
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(base);
+        sContext = this;
+    }
+
+    public static Context getContext() {
+        return sContext;
+    }
+
+    private void init() {
+        // do somethings
+    }
+}
