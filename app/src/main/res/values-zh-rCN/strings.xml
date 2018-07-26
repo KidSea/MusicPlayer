@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">余音绕梁</string>
+
+    <!-- actionbar -->
+    <string name="drawer_open">打开</string>
+    <string name="drawer_close">关闭</string>
+    <string name="action_search">搜索</string>
+    <string name="action_settings">设置</string>
+    <string name="action_equlizer">均衡</string>
+    <string name="action_exit">退出</string>
+</resources>

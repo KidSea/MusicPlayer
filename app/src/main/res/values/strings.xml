@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">MusicPlayer</string>
+
+    <!-- actionbar -->
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+    <string name="action_search">Search</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_equlizer">Equlizer</string>
+    <string name="action_exit">Exit</string>
 </resources>
