@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.TabLayout;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -26,7 +25,6 @@ public class MusicPlayMainActivity extends AppCompatActivity implements
         NavigationView.OnNavigationItemSelectedListener {
 
     private Toolbar mToolbar;
-    private TabLayout mTabLayout;
     private DrawerLayout mDrawerLayout;
     private NavigationView mNavigationView;
 
@@ -86,7 +84,6 @@ public class MusicPlayMainActivity extends AppCompatActivity implements
 
     private void initView() {
         mToolbar = mMainviewBinding.mainInclude.appToolbar;
-        mTabLayout = mMainviewBinding.mainInclude.appTabLayout;
         mDrawerLayout = mMainviewBinding.drawerLayout;
         mNavigationView = mMainviewBinding.navView;
     }
