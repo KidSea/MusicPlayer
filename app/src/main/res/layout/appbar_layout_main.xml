@@ -28,12 +28,10 @@
 
         </android.support.design.widget.AppBarLayout>
 
-        <FrameLayout
-            android:id="@+id/content"
+        <include
+            android:id="@+id/music_content"
+            layout="@layout/music_content_main"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:fitsSystemWindows="true">
-        </FrameLayout>
-
+            android:layout_height="match_parent"/>
     </android.support.constraint.ConstraintLayout>
 </layout>

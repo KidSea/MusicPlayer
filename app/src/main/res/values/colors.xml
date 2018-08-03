@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <color name="colorPrimary">#1296db</color>
     <color name="colorPrimaryDark">#047bb3</color>
     <color name="colorAccent">#1296db</color>
 
     <color name="white">#ffffff</color>
     <color name="title_white">#80ffffff</color>
+
+    <!-- 通用 -->
+    <color name="music_bg_color">@color/white</color>
+    <color name="black_20">#33000000</color>
+
+    <!-- 普通灰色字体的颜色 -->
+    <color name="normal_gray_text_color" tools:ignore="UnusedResources">#A0AAAA</color>
+    <color name="detail_header_text_color">@android:color/tertiary_text_light</color>
 </resources>

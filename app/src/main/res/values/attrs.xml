@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="tag_group">
+        <attr name="horizontalSpacing" format="dimension" />
+        <attr name="horizontalPadding" format="dimension" />
+        <attr name="verticalSpacing" format="dimension" />
+        <attr name="autoLineFeed" format="boolean" />
+        <attr name="haveAnimation" format="boolean" />
+        <attr name="rowSize" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="diverginglight_imageview">
+        <attr name="animationDrawable" format="reference" />
+        <attr name="strokeWidth" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="nowplaying_up_menu_item">
+        <attr name="drawableTop" format="reference" />
+        <attr name="text" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="ImageCoverFlowView">
+        <attr name="visibleImage" format="integer" />
+        <attr name="reflectionHeight" format="fraction" />
+        <attr name="reflectionGap" format="dimension" />
+        <attr name="topImageClickEnable" format="boolean" />
+        <attr name="coverflowGravity" format="enum">
+            <enum name="top" value="0" />
+            <enum name="bottom" value="1" />
+            <enum name="center_vertical" value="2" />
+        </attr>
+        <attr name="coverflowLayoutMode" format="enum">
+            <enum name="match_parent" value="0"></enum>
+            <enum name="wrap_content" value="1"></enum>
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="play_animation">
+        <attr name="animDrawable" format="reference" />
+        <attr name="animDrawableBackground" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="DualLineContainer">
+        <attr name="verticalDividerSize" format="dimension" />
+        <attr name="horizontalDividerSize" format="dimension" />
+    </declare-styleable>
+
+    <!--  specific attributes. These attributes are used to configure
+         a SlidingLayout from XML. -->
+    <declare-styleable name="SlidingLayout">
+        <!-- Identifier for the child that represents the drawer's handle. -->
+        <attr name="handle" format="reference" />
+        <!-- Identifier for the child that represents the drawer's content. -->
+        <attr name="content" format="reference" />
+        <!-- Identifier for the child that represents the drawer's default_content. -->
+        <attr name="default_content" format="reference" />
+        <!-- Orientation of the SlidingLayout. -->
+        <attr name="orientation">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+        <!-- Extra offset for the handle at the bottom of the SlidingLayout. -->
+        <attr name="bottomOffset" format="dimension" />
+        <!-- Extra offset for the handle at the top of the SlidingLayout. -->
+        <attr name="topOffset" format="dimension" />
+        <!-- Indicates whether the drawer can be opened/closed by a single tap
+             on the handle.  (If false, the user must drag or fling, or click
+             using the trackball, to open/close the drawer.)  Default is true. -->
+        <attr name="allowSingleTap" format="boolean" />
+        <!-- Indicates whether the drawer should be opened/closed with an animation
+             when the user clicks the handle. Default is true. -->
+        <attr name="animateOnClick" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="BatteryMeterView">
+        <attr name="frameColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="FakeStart">
+        <attr name="mzStartWindowLayout" format="reference"/>
+        <attr name="mzStartWindowLayout_intl" format="reference"/>
+        <attr name="mzStartWindowLayout_esay" format="reference"/>
+        <attr name="mzStartWindowLayout_intl_easy" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="CircleProgressBar">
+        <attr name="mcCircleBarWidth" format="dimension" />
+        <attr name="mcCircleBarColor" format="color" />
+        <attr name="mcCircleBarRimColor" format="color" />
+        <attr name="mcCircleBarProgress" format="integer" />
+        <attr name="mcCircleBarMax" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="SlidingUpPanelLayout">
+        <attr format="dimension" name="umanoPanelHeight"/>
+        <attr format="dimension" name="umanoShadowHeight"/>
+        <attr format="dimension" name="umanoParallaxOffset"/>
+        <attr format="color" name="umanoFadeColor"/>
+        <attr format="integer" name="umanoFlingVelocity"/>
+        <attr format="reference" name="umanoDragView"/>
+        <attr format="reference" name="umanoScrollableView"/>
+        <attr format="boolean" name="umanoOverlay"/>
+        <attr format="boolean" name="umanoClipPanel"/>
+        <attr format="float" name="umanoAnchorPoint"/>
+        <attr format="enum" name="umanoInitialState">
+            <enum name="expanded" value="0"/>
+            <enum name="collapsed" value="1"/>
+            <enum name="anchored" value="2"/>
+            <enum name="hidden" value="3"/>
+        </attr>
+        <attr format="reference" name="umanoScrollInterpolator"/>
+    </declare-styleable>
+</resources>
