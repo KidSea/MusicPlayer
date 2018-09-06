@@ -9,7 +9,6 @@ import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.transition.Fade;
 import android.view.KeyEvent;
@@ -19,9 +18,10 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.leslie.musicplayer.R;
+import com.leslie.musicplayer.base.BaseMusicActivity;
 import com.leslie.musicplayer.databinding.MusicPlayMainBinding;
 
-public class MusicPlayMainActivity extends AppCompatActivity implements
+public class MusicPlayMainActivity extends BaseMusicActivity implements
         NavigationView.OnNavigationItemSelectedListener {
 
     private Toolbar mToolbar;
@@ -59,17 +59,14 @@ public class MusicPlayMainActivity extends AppCompatActivity implements
     }
 
     @Override
+    protected int requestLayoutId() {
+        return R.layout.music_play_main;
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().setEnterTransition(new Fade());
-
-        mMainviewBinding = DataBindingUtil.setContentView(this, R.layout.music_play_main);
-
-        if (mMainviewBinding != null) {
-            initView();
-            initActionBar();
-            initViewData();
-        }
     }
 
     @Override
@@ -78,17 +75,23 @@ public class MusicPlayMainActivity extends AppCompatActivity implements
         mDrawerToggle.syncState();
     }
 
-    private void initViewData() {
+    @Override
+    protected void initData() {
+        super.initData();
         mNavigationView.setNavigationItemSelectedListener(this);
     }
 
-    private void initView() {
+    @Override
+    protected void initView() {
+        super.initView();
+        mMainviewBinding = DataBindingUtil.setContentView(this, requestLayoutId());
         mToolbar = mMainviewBinding.mainInclude.appToolbar;
         mDrawerLayout = mMainviewBinding.drawerLayout;
         mNavigationView = mMainviewBinding.navView;
     }
 
-    private void initActionBar() {
+    @Override
+    protected void initActionBar() {
         mToolbar.setTitle(R.string.app_name);
         mToolbar.setTitleTextColor(Color.WHITE);
         setSupportActionBar(mToolbar);
