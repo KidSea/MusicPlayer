@@ -65,8 +65,9 @@ public class MusicPlayMainActivity extends BaseMusicActivity implements
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
         getWindow().setEnterTransition(new Fade());
+        mMainviewBinding = DataBindingUtil.setContentView(this, requestLayoutId());
+        super.onCreate(savedInstanceState);
     }
 
     @Override
@@ -84,7 +85,6 @@ public class MusicPlayMainActivity extends BaseMusicActivity implements
     @Override
     protected void initView() {
         super.initView();
-        mMainviewBinding = DataBindingUtil.setContentView(this, requestLayoutId());
         mToolbar = mMainviewBinding.mainInclude.appToolbar;
         mDrawerLayout = mMainviewBinding.drawerLayout;
         mNavigationView = mMainviewBinding.navView;
