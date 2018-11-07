@@ -1,6 +1,5 @@
 package com.leslie.musicplayer.ui.mainpage;
 
-import android.databinding.DataBindingUtil;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -19,7 +18,6 @@ import android.widget.Toast;
 
 import com.leslie.musicplayer.R;
 import com.leslie.musicplayer.base.BaseMusicActivity;
-import com.leslie.musicplayer.databinding.MusicPlayMainBinding;
 
 public class MusicPlayMainActivity extends BaseMusicActivity implements
         NavigationView.OnNavigationItemSelectedListener {
@@ -28,7 +26,6 @@ public class MusicPlayMainActivity extends BaseMusicActivity implements
     private DrawerLayout mDrawerLayout;
     private NavigationView mNavigationView;
 
-    private MusicPlayMainBinding mMainviewBinding;
     private ActionBarDrawerToggle mDrawerToggle;
     private long exitTime;
 
@@ -66,7 +63,6 @@ public class MusicPlayMainActivity extends BaseMusicActivity implements
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         getWindow().setEnterTransition(new Fade());
-        mMainviewBinding = DataBindingUtil.setContentView(this, requestLayoutId());
         super.onCreate(savedInstanceState);
     }
 
@@ -85,9 +81,9 @@ public class MusicPlayMainActivity extends BaseMusicActivity implements
     @Override
     protected void initView() {
         super.initView();
-        mToolbar = mMainviewBinding.mainInclude.appToolbar;
-        mDrawerLayout = mMainviewBinding.drawerLayout;
-        mNavigationView = mMainviewBinding.navView;
+        mToolbar = (Toolbar)findViewById(R.id.app_toolbar);
+        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        mNavigationView = (NavigationView) findViewById(R.id.nav_view);
     }
 
     @Override
