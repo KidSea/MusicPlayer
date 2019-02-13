@@ -22,6 +22,10 @@ public class SplashActivity extends AppCompatActivity {
     private RelativeLayout mSplashLayout;
 
     @Override
+    public void onBackPressed() {
+    }
+
+    @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Fade fade = new Fade();

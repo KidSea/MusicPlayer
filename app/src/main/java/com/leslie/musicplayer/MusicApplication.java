@@ -12,6 +12,7 @@ public class MusicApplication extends Application {
     private static final String TAG = "MusicApplication";
 
     private static Context sContext;
+    private static Application sApplication;
 
     @Override
     public void onCreate() {
@@ -23,6 +24,11 @@ public class MusicApplication extends Application {
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(base);
         sContext = this;
+        sApplication = this;
+    }
+
+    public static Application getApplication() {
+        return sApplication;
     }
 
     public static Context getContext() {
