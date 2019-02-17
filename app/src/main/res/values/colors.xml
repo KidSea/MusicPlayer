@@ -11,6 +11,9 @@
     <color name="music_bg_color">@color/white</color>
     <color name="black_20">#33000000</color>
 
+    <!--页面背景的颜色-->
+    <color name="color_page_bg">#F1F3F4</color>
+
     <!-- 普通灰色字体的颜色 -->
     <color name="normal_gray_text_color" tools:ignore="UnusedResources">#A0AAAA</color>
     <color name="detail_header_text_color">@android:color/tertiary_text_light</color>
