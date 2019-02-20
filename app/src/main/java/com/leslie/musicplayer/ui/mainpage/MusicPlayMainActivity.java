@@ -100,7 +100,7 @@ public class MusicPlayMainActivity extends BaseMusicActivity implements
     @Override
     protected void initData() {
         super.initData();
-        mNavigationView.setNavigationItemSelectedListener(this);
+
     }
 
     @Override
@@ -134,6 +134,7 @@ public class MusicPlayMainActivity extends BaseMusicActivity implements
         mIvTitleOne.setOnClickListener(this);
         mIvTitleTwo.setOnClickListener(this);
         mIvTitleThree.setOnClickListener(this);
+        mNavigationView.setNavigationItemSelectedListener(this);
     }
 
     /**

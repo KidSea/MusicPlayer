@@ -1,4 +1,4 @@
-package com.leslie.musicplayer.ui.mainpage;
+package com.leslie.musicplayer.ui.splash;
 
 import android.content.Intent;
 import android.os.Build;
@@ -11,6 +11,7 @@ import android.transition.Fade;
 import android.widget.RelativeLayout;
 
 import com.leslie.musicplayer.R;
+import com.leslie.musicplayer.ui.mainpage.MusicPlayMainActivity;
 
 import static com.leslie.musicplayer.utils.PermissionUtils.REQUEST_CODE;
 import static com.leslie.musicplayer.utils.PermissionUtils.hasAllPermissionsGranted;
