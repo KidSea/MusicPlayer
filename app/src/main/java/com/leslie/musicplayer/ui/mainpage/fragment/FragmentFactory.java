@@ -1,4 +1,4 @@
-package com.leslie.musicplayer.ui.fragment;
+package com.leslie.musicplayer.ui.mainpage.fragment;
 
 import android.util.SparseArray;
 

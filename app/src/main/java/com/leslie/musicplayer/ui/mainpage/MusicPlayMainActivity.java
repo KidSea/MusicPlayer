@@ -19,9 +19,11 @@ import android.widget.Toast;
 
 import com.leslie.musicplayer.R;
 import com.leslie.musicplayer.base.BaseMusicActivity;
+import com.leslie.musicplayer.ui.mainpage.adapter.MainPagerAdapter;
 
 public class MusicPlayMainActivity extends BaseMusicActivity implements
-        NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
+        NavigationView.OnNavigationItemSelectedListener, View.OnClickListener,
+        ViewPager.OnPageChangeListener {
 
     private Toolbar mToolbar;
     private DrawerLayout mDrawerLayout;
@@ -33,6 +35,7 @@ public class MusicPlayMainActivity extends BaseMusicActivity implements
     private ViewPager mVpContent;
 
     private long exitTime;
+    private MainPagerAdapter mMainPagerAdapter;
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
@@ -61,46 +64,23 @@ public class MusicPlayMainActivity extends BaseMusicActivity implements
     }
 
     @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.ll_title_menu:
-                // 开启菜单
-                toggleDrawer();
-                break;
-            case R.id.iv_title_two:
-                // 不然cpu会有损耗
-//                if (mVpContent.getCurrentItem() != 1) {
-                    setCurrentItem(1);
-//                }
-                break;
-            case R.id.iv_title_one:
-//                if (mVpContent.getCurrentItem() != 0) {
-                    setCurrentItem(0);
-//                }
-                break;
-            case R.id.iv_title_three:
-//                if (mVpContent.getCurrentItem() != 2) {
-                    setCurrentItem(2);
-//                }
-                break;
-        }
-    }
-
-    @Override
-    protected int requestLayoutId() {
-        return R.layout.music_play_main;
-    }
-
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         getWindow().setEnterTransition(new Fade());
         super.onCreate(savedInstanceState);
     }
 
     @Override
-    protected void initData() {
-        super.initData();
+    protected void onDestroy() {
+        super.onDestroy();
+        if (mMainPagerAdapter != null) {
+            mMainPagerAdapter.destoryAadapter();
+            mMainPagerAdapter = null;
+        }
+    }
 
+    @Override
+    protected int requestLayoutId() {
+        return R.layout.music_play_main;
     }
 
     @Override
@@ -120,6 +100,16 @@ public class MusicPlayMainActivity extends BaseMusicActivity implements
     }
 
     @Override
+    protected void initData() {
+        super.initData();
+        mMainPagerAdapter = new MainPagerAdapter(getSupportFragmentManager());
+        mVpContent.setAdapter(mMainPagerAdapter);
+        // 设置ViewPager最大缓存的页面个数(cpu消耗少)
+        mVpContent.setOffscreenPageLimit(2);
+        mVpContent.addOnPageChangeListener(this);
+    }
+
+    @Override
     protected void initActionBar() {
         setSupportActionBar(mToolbar);
         ActionBar actionBar = getSupportActionBar();
@@ -127,6 +117,60 @@ public class MusicPlayMainActivity extends BaseMusicActivity implements
             //去除默认Title显示
             actionBar.setDisplayShowTitleEnabled(false);
         }
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.ll_title_menu:
+                // 开启菜单
+                toggleDrawer();
+                break;
+            case R.id.iv_title_one:
+                if (mVpContent.getCurrentItem() != 0) {
+                    setCurrentItem(0);
+                }
+                break;
+            case R.id.iv_title_two:
+                // 不然cpu会有损耗
+                if (mVpContent.getCurrentItem() != 1) {
+                    setCurrentItem(1);
+                }
+                break;
+            case R.id.iv_title_three:
+                if (mVpContent.getCurrentItem() != 2) {
+                    setCurrentItem(2);
+                }
+                break;
+        }
+    }
+
+
+    @Override
+    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+    }
+
+    @Override
+    public void onPageSelected(int position) {
+        switch (position) {
+            case 0:
+                setCurrentItem(0);
+                break;
+            case 1:
+                setCurrentItem(1);
+                break;
+            case 2:
+                setCurrentItem(2);
+                break;
+            default:
+                break;
+        }
+    }
+
+    @Override
+    public void onPageScrollStateChanged(int state) {
+
     }
 
     private void initListener() {
@@ -160,7 +204,7 @@ public class MusicPlayMainActivity extends BaseMusicActivity implements
                 isTwo = true;
                 break;
         }
-//        mVpContent.setCurrentItem(position);
+        mVpContent.setCurrentItem(position);
         mIvTitleOne.setSelected(isOne);
         mIvTitleTwo.setSelected(isTwo);
         mIvTitleThree.setSelected(isThree);
