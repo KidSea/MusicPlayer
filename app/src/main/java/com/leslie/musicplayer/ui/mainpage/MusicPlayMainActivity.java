@@ -66,6 +66,7 @@ public class MusicPlayMainActivity extends BaseMusicActivity implements
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         getWindow().setEnterTransition(new Fade());
+        setContentView(R.layout.music_play_main);
         super.onCreate(savedInstanceState);
     }
 
@@ -76,11 +77,6 @@ public class MusicPlayMainActivity extends BaseMusicActivity implements
             mMainPagerAdapter.destoryAadapter();
             mMainPagerAdapter = null;
         }
-    }
-
-    @Override
-    protected int requestLayoutId() {
-        return R.layout.music_play_main;
     }
 
     @Override
