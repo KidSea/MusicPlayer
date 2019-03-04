@@ -4,12 +4,34 @@
     <color name="colorPrimaryDark">#047bb3</color>
     <color name="colorAccent">#1296db</color>
 
-    <color name="white">#ffffff</color>
     <color name="title_white">#80ffffff</color>
 
     <!-- 通用 -->
     <color name="music_bg_color">@color/white</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="black_80">#cc000000</color>
+    <color name="black_75">#bf000000</color>
+    <color name="black_60">#99000000</color>
+    <color name="black_50">#80000000</color>
+    <color name="black_40" tools:ignore="UnusedResources">#66000000</color>
+    <color name="black_35">#59000000</color>
+    <color name="black_30">#4c000000</color>
     <color name="black_20">#33000000</color>
+    <color name="black_15">#26000000</color>
+    <color name="black_10" tools:ignore="UnusedResources">#19000000</color>
+    <color name="black_8">#14000000</color>
+    <color name="black_5">#0D000000</color>
+    <color name="white_80">#ccFFFFFF</color>
+    <color name="white_70">#b2FFFFFF</color>
+    <color name="white_60">#99FFFFFF</color>
+    <!--<color name="white_96">#feFFFFFF</color>-->
+    <color name="white_50">#80FFFFFF</color>
+    <color name="white_40">#6BFFFFFF</color>
+    <color name="white_20">#33FFFFFF</color>
+    <color name="white_5" tools:ignore="UnusedResources">#0DFFFFFF</color>
+    <!--<color name="white_10">#19FFFFFF</color>-->
+    <color name="white_30">#4CFFFFFF</color>
 
     <!--页面背景的颜色-->
     <color name="color_page_bg">#F1F3F4</color>

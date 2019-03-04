@@ -15,7 +15,7 @@ public class QuickControlsFragment extends BaseFragment {
 
     @Override
     protected int requestLayoutId() {
-        return R.layout.main_fragment;
+        return R.layout.mini_music_fragment;
     }
 
 

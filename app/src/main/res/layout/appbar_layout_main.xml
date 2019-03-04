@@ -12,9 +12,9 @@
     <!--状态栏-->
     <View
         android:id="@+id/view_status"
-        android:layout_above="@id/app_toolbar"
         android:layout_width="match_parent"
         android:layout_height="24dp"
+        android:layout_above="@id/app_toolbar"
         android:background="@color/colorPrimaryDark"
         android:visibility="gone"/>
 
@@ -60,6 +60,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/music"
                     android:src="@drawable/titlebar_music"/>
 
                 <ImageView
@@ -68,6 +69,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/video"
                     android:src="@drawable/titlebar_video"/>
 
                 <ImageView
@@ -76,6 +78,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/movie"
                     android:src="@drawable/titlebar_movie"/>
 
             </LinearLayout>
@@ -85,15 +88,15 @@
     </android.support.v7.widget.Toolbar>
 
     <android.support.v4.view.ViewPager
-        android:layout_below="@id/app_toolbar"
         android:id="@+id/vp_content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@id/app_toolbar"
         android:descendantFocusability="blocksDescendants"/>
 
     <FrameLayout
-        android:layout_alignParentBottom="true"
         android:id="@+id/bottom_container"
         android:layout_width="match_parent"
-        android:layout_height="55dp" />
+        android:layout_height="54dp"
+        android:layout_alignParentBottom="true"/>
 </RelativeLayout>

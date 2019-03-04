@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0.67dp"
+        android:background="@color/black_10"
+        android:gravity="center"
+        android:scaleType="center"
+        tools:ignore="ContentDescription,Suspicious0dp"/>
+
+
+    <ImageView
+        android:id="@+id/album_cover"
+        android:layout_width="46dip"
+        android:layout_height="46dip"
+        android:layout_gravity="top|start"
+        android:layout_marginStart="16dip"
+        android:layout_marginTop="4dip"
+        android:scaleType="centerCrop"
+        android:src="@drawable/cover_default_big"
+        tools:ignore="ContentDescription"/>
+
+
+    <TextView
+        android:id="@+id/meizu_slogan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|start"
+        android:layout_marginStart="78dip"
+        android:layout_marginTop="20dip"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif-medium"
+        android:includeFontPadding="false"
+        android:maxWidth="150dip"
+        android:maxLines="1"
+        android:text="@string/app_name"
+        android:textColor="@color/black"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|start"
+        android:layout_marginStart="78dip"
+        android:layout_marginTop="10dip"
+        android:ellipsize="end"
+        android:textStyle="bold"
+        android:includeFontPadding="false"
+        android:maxWidth="150dip"
+        android:maxLines="1"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/artist_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|start"
+        android:layout_marginStart="78dip"
+        android:layout_marginTop="30dip"
+        android:ellipsize="end"
+        android:includeFontPadding="false"
+        android:maxWidth="150dip"
+        android:maxLines="1"
+        android:textSize="12sp"/>
+
+
+    <ImageView
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="15dip"
+        android:layout_marginEnd="12dip"
+        android:contentDescription="@string/blind_mode_next"
+        android:scaleType="centerCrop"
+        android:src="@drawable/minibar_ic_next"/>
+
+    <ImageView
+        android:id="@+id/play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="15dip"
+        android:layout_marginEnd="58dip"
+        android:contentDescription="@string/blind_mode_play"
+        android:scaleType="centerCrop"
+        android:src="@drawable/minibar_ic_play"/>
+
+    <ImageView
+        android:id="@+id/add_to_favorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="15dip"
+        android:layout_marginEnd="104dip"
+        android:scaleType="centerCrop"
+        android:src="@drawable/playbar_ic_like_normal"
+        tools:ignore="ContentDescription"/>
+
+</FrameLayout>

@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">余音绕梁</string>
+    <string name="leslie_music">余音绕梁</string>
 
     <!-- actionbar -->
     <string name="drawer_open">打开</string>
@@ -8,4 +9,14 @@
     <string name="action_settings">设置</string>
     <string name="action_equlizer">均衡</string>
     <string name="action_exit">退出</string>
+    <string name="music">音乐</string>
+    <string name="video">视频</string>
+    <string name="movie">榜单</string>
+
+    <!--splash-->
+    <string name="copyright_leslie">Copyright@Leslie</string>
+
+    <!--mini play-->
+    <string name="blind_mode_play">播放</string>
+    <string name="blind_mode_next">下一曲</string>
 </resources>

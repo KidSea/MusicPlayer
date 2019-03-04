@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">MusicPlayer</string>
+    <string name="leslie_music">余音绕梁</string>
 
     <!-- actionbar -->
     <string name="drawer_open">Open</string>
@@ -8,5 +9,14 @@
     <string name="action_settings">Settings</string>
     <string name="action_equlizer">Equlizer</string>
     <string name="action_exit">Exit</string>
+    <string name="music">music</string>
+    <string name="video">video</string>
+    <string name="movie">movie</string>
+
+    <!--splash-->
     <string name="copyright_leslie">Copyright@Leslie</string>
+
+    <!--mini play-->
+    <string name="blind_mode_play">play</string>
+    <string name="blind_mode_next">next</string>
 </resources>
