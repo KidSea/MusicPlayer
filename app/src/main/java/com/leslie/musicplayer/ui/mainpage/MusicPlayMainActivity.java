@@ -64,9 +64,23 @@ public class MusicPlayMainActivity extends BaseMusicActivity implements
     }
 
     @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_search:
+                Toast.makeText(this, "搜索", Toast.LENGTH_SHORT).show();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         getWindow().setEnterTransition(new Fade());
         setContentView(R.layout.music_play_main);
+        initView();
+        initData();
+        initActionBar();
         super.onCreate(savedInstanceState);
     }
 
@@ -95,9 +109,7 @@ public class MusicPlayMainActivity extends BaseMusicActivity implements
         initListener();
     }
 
-    @Override
     protected void initData() {
-        super.initData();
         mMainPagerAdapter = new MainPagerAdapter(getSupportFragmentManager());
         mVpContent.setAdapter(mMainPagerAdapter);
         // 设置ViewPager最大缓存的页面个数(cpu消耗少)
@@ -105,7 +117,6 @@ public class MusicPlayMainActivity extends BaseMusicActivity implements
         mVpContent.addOnPageChangeListener(this);
     }
 
-    @Override
     protected void initActionBar() {
         setSupportActionBar(mToolbar);
         ActionBar actionBar = getSupportActionBar();

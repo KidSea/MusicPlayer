@@ -21,21 +21,6 @@ public class BaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        initView();
-        initData();
-        initActionBar();
-    }
-
-    protected void initData() {
-
-    }
-
-    protected void initView() {
-
-    }
-
-    protected void initActionBar() {
-
     }
 
 }

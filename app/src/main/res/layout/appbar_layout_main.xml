@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="24dp"
         android:layout_above="@id/app_toolbar"
-        android:background="@color/colorPrimaryDark"
+        android:background="@color/colorPrimary"
         android:visibility="gone"/>
 
     <android.support.v7.widget.Toolbar

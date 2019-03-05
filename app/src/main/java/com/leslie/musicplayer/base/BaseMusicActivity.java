@@ -9,10 +9,8 @@ public class BaseMusicActivity extends BaseActivity {
 
     private QuickControlsFragment fragment; //底部播放控制栏
 
-    @Override
     protected void initView() {
         showQuickControl(true);
-        super.initView();
     }
 
     /**
