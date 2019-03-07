@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout
+    android:id="@+id/fl_mini_container"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -15,7 +16,7 @@
 
 
     <ImageView
-        android:id="@+id/album_cover"
+        android:id="@+id/iv_album_cover"
         android:layout_width="46dip"
         android:layout_height="46dip"
         android:layout_gravity="top|start"
@@ -27,7 +28,7 @@
 
 
     <TextView
-        android:id="@+id/meizu_slogan"
+        android:id="@+id/tv_music_slogan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="top|start"
@@ -43,7 +44,7 @@
         android:textSize="14sp"/>
 
     <TextView
-        android:id="@+id/title_text"
+        android:id="@+id/tv_title_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="top|start"
@@ -57,7 +58,7 @@
         android:textSize="14sp"/>
 
     <TextView
-        android:id="@+id/artist_text"
+        android:id="@+id/tv_artist_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="top|start"
@@ -71,7 +72,7 @@
 
 
     <ImageView
-        android:id="@+id/next"
+        android:id="@+id/iv_next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="top|end"
@@ -82,7 +83,7 @@
         android:src="@drawable/minibar_ic_next"/>
 
     <ImageView
-        android:id="@+id/play"
+        android:id="@+id/iv_play"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="top|end"
@@ -93,7 +94,7 @@
         android:src="@drawable/minibar_ic_play"/>
 
     <ImageView
-        android:id="@+id/add_to_favorite"
+        android:id="@+id/iv_add_to_favorite"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="top|end"

@@ -97,6 +97,6 @@
     <FrameLayout
         android:id="@+id/bottom_container"
         android:layout_width="match_parent"
-        android:layout_height="54dp"
+        android:layout_height="@dimen/minifragment_height"
         android:layout_alignParentBottom="true"/>
 </RelativeLayout>
