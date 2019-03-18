@@ -76,12 +76,12 @@ public class MusicPlayMainActivity extends BaseMusicActivity implements
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         getWindow().setEnterTransition(new Fade());
-        setContentView(R.layout.music_play_main);
+        setContentView(R.layout.music_play_main_activity);
         initView();
         initData();
         initActionBar();
-        super.onCreate(savedInstanceState);
     }
 
     @Override

@@ -1,7 +1,6 @@
 package com.leslie.musicplayer.ui.mainpage.fragment;
 
 import android.view.View;
-import android.widget.TextView;
 
 import com.leslie.musicplayer.R;
 import com.leslie.musicplayer.base.BaseFragment;
@@ -12,13 +11,11 @@ import com.leslie.musicplayer.base.BaseFragment;
 public class MusicFragment extends BaseFragment {
     @Override
     protected int requestLayoutId() {
-        return R.layout.main_fragment;
+        return R.layout.music_main_fragment;
     }
 
     @Override
     protected void initView(View view) {
         super.initView(view);
-        TextView ivContent = view.findViewById(R.id.iv_content);
-        ivContent.setText("Music");
     }
 }

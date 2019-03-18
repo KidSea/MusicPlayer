@@ -6,6 +6,9 @@
 
     <dimen name="sliding_up_header">55dp</dimen>
 
+    <!--Main activity-->
+    <dimen name="minifragment_height">54dp</dimen>
+
     <!-- common -->
     <dimen name="text_size_32">32.0dip</dimen>
     <dimen name="text_size_31">31.0dip</dimen>
