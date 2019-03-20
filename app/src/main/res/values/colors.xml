@@ -39,4 +39,6 @@
     <!-- 普通灰色字体的颜色 -->
     <color name="normal_gray_text_color" tools:ignore="UnusedResources">#A0AAAA</color>
     <color name="detail_header_text_color">@android:color/tertiary_text_light</color>
+
+    <color name="action_menu_view_ripple">#15000000</color>
 </resources>

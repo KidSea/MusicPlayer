@@ -71,4 +71,9 @@
     <dimen name="space_3">3.0dip</dimen>
     <dimen name="space_2">2.0dip</dimen>
     <dimen name="space_1">1.0dip</dimen>
+
+    <!-- main music-->
+    <dimen name="common_middle_textsize">14sp</dimen>
+    <dimen name="common_small_textsize">12sp</dimen>
+    <dimen name="media_empty_text_size">16sp</dimen>
 </resources>

@@ -19,4 +19,12 @@
     <!--mini play-->
     <string name="blind_mode_play">play</string>
     <string name="blind_mode_next">next</string>
+
+    <!-- music main-->
+    <string name="my_favorite">Favorites</string>
+    <string name="recently_play">Recent</string>
+    <string name="my_playlist">My playlists</string>
+    <string name="shuffle">Shuffle</string>
+    <string name="local_music">Local Music</string>
+    <string name="local_empty_text">Local music will be shown here</string>
 </resources>
