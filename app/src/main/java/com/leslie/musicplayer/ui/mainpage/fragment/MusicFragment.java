@@ -1,16 +1,16 @@
 package com.leslie.musicplayer.ui.mainpage.fragment;
 
 import android.support.v7.widget.RecyclerView;
-import android.view.View;
 
 import com.leslie.musicplayer.R;
-import com.leslie.musicplayer.base.BaseFragment;
-import com.leslie.musicplayer.utils.ViewUtils;
+import com.leslie.musicplayer.base.BaseModelFragment;
+import com.leslie.musicplayer.databinding.MusicMainFragmentBinding;
+import com.leslie.musicplayer.viewModel.NoViewModel;
 
 /**
  * Created by yuxuehai on 19-02-20.
  */
-public class MusicFragment extends BaseFragment {
+public class MusicFragment extends BaseModelFragment<NoViewModel, MusicMainFragmentBinding> {
 
     private RecyclerView mMuiscListRecyclerView;
 
@@ -20,9 +20,13 @@ public class MusicFragment extends BaseFragment {
     }
 
     @Override
-    protected void initView(View view) {
-        super.initView(view);
-        mMuiscListRecyclerView = ViewUtils.findView(view, R.id.music_list_recyclerview);
+    protected void initView() {
+        super.initView();
+    }
+
+    @Override
+    protected void initData() {
+        super.initData();
     }
 
     @Override

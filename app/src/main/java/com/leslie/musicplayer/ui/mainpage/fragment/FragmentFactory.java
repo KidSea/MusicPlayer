@@ -2,7 +2,7 @@ package com.leslie.musicplayer.ui.mainpage.fragment;
 
 import android.util.SparseArray;
 
-import com.leslie.musicplayer.base.BaseFragment;
+import com.leslie.musicplayer.base.BaseModelFragment;
 
 /**
  * Created by yuxuehai on 19-02-20.
@@ -22,11 +22,11 @@ public class FragmentFactory {
         return sFragmentFactory;
     }
 
-    private SparseArray<BaseFragment> mFragmentMap = new SparseArray<BaseFragment>();
+    private SparseArray<BaseModelFragment> mFragmentMap = new SparseArray<BaseModelFragment>();
 
 
-    public BaseFragment getFragment(int position) {
-        BaseFragment fragment = mFragmentMap.get(position);
+    public BaseModelFragment getFragment(int position) {
+        BaseModelFragment fragment = mFragmentMap.get(position);
 
 
         //先从集合中取，如果没有才创建对象，可以提高性能
