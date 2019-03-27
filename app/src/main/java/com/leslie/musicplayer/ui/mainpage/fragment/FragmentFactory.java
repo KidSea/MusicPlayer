@@ -3,6 +3,7 @@ package com.leslie.musicplayer.ui.mainpage.fragment;
 import android.util.SparseArray;
 
 import com.leslie.musicplayer.base.BaseModelFragment;
+import com.leslie.musicplayer.ui.localmusic.MusicFragment;
 
 /**
  * Created by yuxuehai on 19-02-20.

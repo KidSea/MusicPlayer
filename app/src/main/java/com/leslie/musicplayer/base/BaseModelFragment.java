@@ -3,10 +3,7 @@ package com.leslie.musicplayer.base;
 import android.arch.lifecycle.AndroidViewModel;
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.Context;
-<<<<<<< HEAD
-=======
 import android.databinding.DataBindingUtil;
->>>>>>> develop local music day3
 import android.databinding.ViewDataBinding;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -15,10 +12,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-<<<<<<< HEAD
-=======
 
->>>>>>> develop local music day3
 import com.leslie.musicplayer.utils.ClassUtils;
 
 /**
@@ -50,9 +44,6 @@ public abstract class BaseModelFragment<VM extends AndroidViewModel,
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
                              @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-<<<<<<< HEAD
-        return super.onCreateView(inflater, container, savedInstanceState);
-=======
         mBindingView = DataBindingUtil.inflate(inflater, requestLayoutId(), container, false);
         initView();
         return mBindingView.getRoot();
@@ -71,17 +62,13 @@ public abstract class BaseModelFragment<VM extends AndroidViewModel,
             mIsVisible = false;
             onInvisible();
         }
->>>>>>> develop local music day3
     }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-<<<<<<< HEAD
-=======
         initViewModel();
         initData();
->>>>>>> develop local music day3
     }
 
     @Override
@@ -90,8 +77,6 @@ public abstract class BaseModelFragment<VM extends AndroidViewModel,
         mContext = null;
     }
 
-<<<<<<< HEAD
-=======
     protected void onVisible() {
         loadData();
     }
@@ -111,7 +96,6 @@ public abstract class BaseModelFragment<VM extends AndroidViewModel,
     protected void initData() {
     }
 
->>>>>>> develop local music day3
     /**
      * 显示时加载数据,需要这样的使用
      * 注意声明 isPrepared，先初始化
@@ -131,14 +115,11 @@ public abstract class BaseModelFragment<VM extends AndroidViewModel,
         }
     }
 
-<<<<<<< HEAD
 
-=======
     /**
      * 布局
      *
      * @return
      */
     protected abstract int requestLayoutId();
->>>>>>> develop local music day3
 }
