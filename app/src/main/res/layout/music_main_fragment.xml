@@ -7,14 +7,15 @@
     <com.leslie.musicplayer.widget.CustomerScrollView
         android:id="@+id/scroll_layout"
         android:layout_width="match_parent"
+        android:scrollbars="none"
+        android:overScrollMode="never"
         android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:descendantFocusability="blocksDescendants"
             android:orientation="vertical">
-            <include layout="@layout/local_number_header_layout"/>
-
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/music_list_recyclerview"
                 android:layout_width="match_parent"
