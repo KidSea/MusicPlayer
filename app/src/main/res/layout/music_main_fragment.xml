@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
     <data>
-        <variable name="viewModel" type="com.leslie.musicplayer.viewModel.localmusic.MusicViewModel"/>
+        <variable name="viewModel"
+                  type="com.leslie.musicplayer.viewModel.localmusic.MusicViewModel"/>
     </data>
 
-    <com.leslie.musicplayer.widget.CustomerScrollView
-        android:id="@+id/scroll_layout"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:scrollbars="none"
-        android:overScrollMode="never"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:descendantFocusability="blocksDescendants">
 
-        <LinearLayout
+        <include layout="@layout/local_number_header_layout" />
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/scroll_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:descendantFocusability="blocksDescendants"
-            android:orientation="vertical">
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
             <com.leslie.musicplayer.widget.MusicRecyclerView
                 android:id="@+id/music_list_recyclerview"
                 android:layout_width="match_parent"
@@ -23,7 +26,8 @@
                 android:divider="@null"
                 android:footerDividersEnabled="false"
                 android:headerDividersEnabled="false"/>
-        </LinearLayout>
 
-    </com.leslie.musicplayer.widget.CustomerScrollView>
+        </android.support.v4.widget.NestedScrollView>
+
+    </RelativeLayout>
 </layout>
