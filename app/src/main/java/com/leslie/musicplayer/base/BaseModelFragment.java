@@ -49,39 +49,18 @@ public abstract class BaseModelFragment<VM extends AndroidViewModel,
         return mBindingView.getRoot();
     }
 
-    /**
-     * 在这里实现Fragment数据的缓加载.
-     */
-    @Override
-    public void setUserVisibleHint(boolean isVisibleToUser) {
-        super.setUserVisibleHint(isVisibleToUser);
-        if (getUserVisibleHint()) {
-            mIsVisible = true;
-            onVisible();
-        } else {
-            mIsVisible = false;
-            onInvisible();
-        }
-    }
-
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         initViewModel();
         initData();
+        loadData();
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
         mContext = null;
-    }
-
-    protected void onVisible() {
-        loadData();
-    }
-
-    protected void onInvisible() {
     }
 
     /**

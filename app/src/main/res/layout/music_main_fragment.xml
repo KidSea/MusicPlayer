@@ -1,23 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:bind="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
     <data>
         <variable name="viewModel"
                   type="com.leslie.musicplayer.viewModel.localmusic.MusicViewModel"/>
     </data>
 
-    <RelativeLayout
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:descendantFocusability="blocksDescendants">
+        android:descendantFocusability="blocksDescendants"
+        android:fitsSystemWindows="true">
 
-        <include layout="@layout/local_number_header_layout" />
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:fitsSystemWindows="true">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <include layout="@layout/local_number_header_layout"/>
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+            <include
+                android:id="@+id/include_control"
+                layout="@layout/local_control_header_layout"/>
+        </android.support.design.widget.AppBarLayout>
 
         <android.support.v4.widget.NestedScrollView
-            android:id="@+id/scroll_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:overScrollMode="never"
-            android:scrollbars="none">
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
             <com.leslie.musicplayer.widget.MusicRecyclerView
                 android:id="@+id/music_list_recyclerview"
@@ -26,8 +47,6 @@
                 android:divider="@null"
                 android:footerDividersEnabled="false"
                 android:headerDividersEnabled="false"/>
-
         </android.support.v4.widget.NestedScrollView>
-
-    </RelativeLayout>
+    </android.support.design.widget.CoordinatorLayout>
 </layout>

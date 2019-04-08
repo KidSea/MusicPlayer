@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="showView"
+                  type="boolean"/>
+    </data>
     <RelativeLayout
         android:id="@+id/number_header"
         android:layout_width="match_parent"
@@ -110,100 +114,11 @@
             </LinearLayout>
         </LinearLayout>
 
-
         <View
             android:id="@+id/header_line"
             android:layout_width="match_parent"
             android:layout_height="12dp"
             android:layout_below="@id/num_area"
             android:background="@color/black_5"/>
-
-        <LinearLayout
-            android:id="@+id/controller"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_below="@id/header_line"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:visibility="gone">
-
-            <TextView
-                android:id="@+id/play_random"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_gravity="center_vertical|start"
-                android:layout_weight="1.0"
-                android:background="@drawable/item_background"
-                android:drawableStart="@drawable/head_play_btn"
-                android:drawablePadding="10dp"
-                android:ellipsize="end"
-                android:fontFamily="sans-serif-medium"
-                android:gravity="start|center_vertical"
-                android:maxLines="1"
-                android:paddingStart="18dp"
-                android:paddingEnd="0dp"
-                android:text="@string/shuffle"
-                android:textColor="@color/black"
-                android:textSize="@dimen/common_middle_textsize"/>
-
-            <ImageView
-                android:id="@+id/sort"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="18dp"
-                android:background="@drawable/item_background_borderless"
-                android:padding="5dp"
-                android:src="@drawable/local_ic_sort"/>
-
-            <ImageView
-                android:id="@+id/list_type"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="18dp"
-                android:background="@drawable/item_background_borderless"
-                android:padding="8dp"
-                android:src="@drawable/local_ic_menu"/>
-        </LinearLayout>
-
-        <View
-            android:id="@+id/number_line"
-            android:layout_width="match_parent"
-            android:layout_height="0.67dp"
-            android:layout_below="@id/controller"
-            android:background="@color/black_10"/>
-
-        <FrameLayout
-            android:id="@+id/empty_container"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@id/header_line"
-            android:background="@color/white"
-            android:visibility="gone">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="start|top"
-                android:fontFamily="sans-serif-medium"
-                android:gravity="center_vertical"
-                android:paddingStart="16dp"
-                android:paddingTop="9dp"
-                android:paddingEnd="16dp"
-                android:paddingBottom="9dp"
-                android:text="@string/local_music"
-                android:textColor="@color/black_40"
-                android:textSize="@dimen/common_small_textsize"/>
-
-            <TextView
-                android:id="@+id/media_empty_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:fontFamily="sans-serif-medium"
-                android:gravity="center"
-                android:text="@string/local_empty_text"
-                android:textColor="@color/normal_gray_text_color"
-                android:textSize="@dimen/media_empty_text_size"/>
-        </FrameLayout>
     </RelativeLayout>
 </layout>
