@@ -32,7 +32,9 @@
 
             <include
                 android:id="@+id/include_control"
-                layout="@layout/local_control_header_layout"/>
+                layout="@layout/local_control_header_layout"
+                bind:showControlView="@{viewModel.mControlBean.showControlView}"
+            />
         </android.support.design.widget.AppBarLayout>
 
         <android.support.v4.widget.NestedScrollView

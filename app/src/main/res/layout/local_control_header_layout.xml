@@ -16,7 +16,7 @@
             android:layout_height="48dp"
             android:gravity="center_vertical"
             android:orientation="horizontal"
-            android:visibility="gone">
+            android:visibility="@{showControlView ? View.VISIBLE : View.GONE}">
 
             <TextView
                 android:id="@+id/play_random"

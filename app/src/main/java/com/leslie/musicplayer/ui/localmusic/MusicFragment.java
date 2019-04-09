@@ -3,7 +3,6 @@ package com.leslie.musicplayer.ui.localmusic;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.util.Log;
-import android.view.View;
 
 import com.leslie.musicplayer.MusicApplication;
 import com.leslie.musicplayer.R;
@@ -48,6 +47,7 @@ public class MusicFragment extends BaseModelFragment<MusicViewModel, MusicMainFr
         adapter = new MusicListAdapter();
         adapter.addDatas(data);
         mBindingView.musicListRecyclerview.setAdapter(adapter);
+        mBindingView.setViewModel(mViewModel);
     }
 
     @Override
@@ -61,6 +61,6 @@ public class MusicFragment extends BaseModelFragment<MusicViewModel, MusicMainFr
             System.out.println(data.get(i));
         }
         Log.d(TAG, "!data.isEmpty()" + !data.isEmpty());
-        mBindingView.includeControl.controller.setVisibility(!data.isEmpty() ? View.VISIBLE : View.GONE);
+        mViewModel.mControlBean.setShowControlView(!data.isEmpty());
     }
 }
