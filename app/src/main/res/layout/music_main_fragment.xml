@@ -48,7 +48,8 @@
                 android:layout_height="match_parent"
                 android:divider="@null"
                 android:footerDividersEnabled="false"
-                android:headerDividersEnabled="false"/>
+                android:headerDividersEnabled="false"
+                bind:adapter="@{viewModel.adapter}"/>
         </android.support.v4.widget.NestedScrollView>
     </android.support.design.widget.CoordinatorLayout>
 </layout>
