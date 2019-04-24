@@ -33,7 +33,6 @@ public class MusicViewModel extends AndroidViewModel {
             String s = "music" + i;
             data.add(s);
         }
-        Log.d(TAG, "!data.isEmpty()" + !data.isEmpty());
         adapter.addDatas(data);
         mControlBean.setShowControlView(!data.isEmpty());
     }
