@@ -2,6 +2,7 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:leslie="http://schemas.android.com/apk/res/com.leslie.musicplayer"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -51,36 +52,51 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:paddingStart="@dimen/space_24"
+                android:paddingEnd="@dimen/space_24"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 app:theme="@style/AppTheme">
 
-                <ImageView
-                    android:id="@+id/iv_title_one"
-                    android:layout_width="55dp"
-                    android:layout_height="wrap_content"
+                <com.leslie.musicplayer.widget.AutoChangeTextView
+                    android:id="@+id/tv_title_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:background="?attr/selectableItemBackgroundBorderless"
-                    android:contentDescription="@string/music"
-                    android:src="@drawable/titlebar_music"/>
+                    android:gravity="center"
+                    android:text="@string/mine"
+                    android:textColor="@color/tv_color_selector"
+                    android:textSize="@dimen/text_size_16.67"
+                    leslie:selectedSize="@dimen/text_size_18.67"
+                    leslie:unSelectedSize="@dimen/text_size_16.67"/>
 
-                <ImageView
-                    android:id="@+id/iv_title_two"
-                    android:layout_width="55dp"
-                    android:layout_height="wrap_content"
+                <com.leslie.musicplayer.widget.AutoChangeTextView
+                    android:id="@+id/tv_title_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/space_24"
                     android:background="?attr/selectableItemBackgroundBorderless"
-                    android:contentDescription="@string/video"
-                    android:src="@drawable/titlebar_video"/>
+                    android:gravity="center"
+                    android:text="@string/explore"
+                    android:textColor="@color/tv_color_selector"
+                    android:textSize="@dimen/text_size_16.67"
+                    leslie:selectedSize="@dimen/text_size_18.67"
+                    leslie:unSelectedSize="@dimen/text_size_16.67"/>
 
-                <ImageView
-                    android:id="@+id/iv_title_three"
-                    android:layout_width="55dp"
-                    android:layout_height="wrap_content"
+                <com.leslie.musicplayer.widget.AutoChangeTextView
+                    android:id="@+id/tv_title_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/space_24"
                     android:background="?attr/selectableItemBackgroundBorderless"
-                    android:contentDescription="@string/movie"
-                    android:src="@drawable/titlebar_movie"/>
-
+                    android:gravity="center"
+                    android:text="@string/video"
+                    android:textColor="@color/tv_color_selector"
+                    android:textSize="@dimen/text_size_16.67"
+                    leslie:selectedSize="@dimen/text_size_18.67"
+                    leslie:unSelectedSize="@dimen/text_size_16.67"/>
             </LinearLayout>
 
         </HorizontalScrollView>
@@ -97,7 +113,7 @@
     <FrameLayout
         android:id="@+id/bottom_container"
         android:layout_width="match_parent"
-        android:background="@color/white_80"
         android:layout_height="@dimen/minifragment_height"
-        android:layout_alignParentBottom="true"/>
+        android:layout_alignParentBottom="true"
+        android:background="@color/white_80"/>
 </RelativeLayout>

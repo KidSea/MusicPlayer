@@ -14,7 +14,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.FrameLayout;
-import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.leslie.musicplayer.R;
@@ -29,9 +29,9 @@ public class MusicPlayMainActivity extends BaseMusicActivity implements
     private DrawerLayout mDrawerLayout;
     private NavigationView mNavigationView;
     private FrameLayout mFlTitleMenu;
-    private ImageView mIvTitleOne;
-    private ImageView mIvTitleTwo;
-    private ImageView mIvTitleThree;
+    private TextView mTvTitleOne;
+    private TextView mTvTitleTwo;
+    private TextView mTvTitleThree;
     private ViewPager mVpContent;
 
     private long exitTime;
@@ -100,11 +100,11 @@ public class MusicPlayMainActivity extends BaseMusicActivity implements
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mNavigationView = (NavigationView) findViewById(R.id.nav_view);
         mFlTitleMenu = (FrameLayout) findViewById(R.id.ll_title_menu);
-        mIvTitleOne = (ImageView) findViewById(R.id.iv_title_one);
-        mIvTitleTwo = (ImageView) findViewById(R.id.iv_title_two);
-        mIvTitleThree = (ImageView) findViewById(R.id.iv_title_three);
+        mTvTitleOne = (TextView) findViewById(R.id.tv_title_one);
+        mTvTitleTwo = (TextView) findViewById(R.id.tv_title_two);
+        mTvTitleThree = (TextView) findViewById(R.id.tv_title_three);
         mVpContent = (ViewPager) findViewById(R.id.vp_content);
-        mIvTitleOne.setSelected(true);
+        mTvTitleOne.setSelected(true);
 
         initListener();
     }
@@ -133,18 +133,18 @@ public class MusicPlayMainActivity extends BaseMusicActivity implements
                 // 开启菜单
                 toggleDrawer();
                 break;
-            case R.id.iv_title_one:
+            case R.id.tv_title_one:
                 if (mVpContent.getCurrentItem() != 0) {
                     setCurrentItem(0);
                 }
                 break;
-            case R.id.iv_title_two:
+            case R.id.tv_title_two:
                 // 不然cpu会有损耗
                 if (mVpContent.getCurrentItem() != 1) {
                     setCurrentItem(1);
                 }
                 break;
-            case R.id.iv_title_three:
+            case R.id.tv_title_three:
                 if (mVpContent.getCurrentItem() != 2) {
                     setCurrentItem(2);
                 }
@@ -182,9 +182,9 @@ public class MusicPlayMainActivity extends BaseMusicActivity implements
 
     private void initListener() {
         mFlTitleMenu.setOnClickListener(this);
-        mIvTitleOne.setOnClickListener(this);
-        mIvTitleTwo.setOnClickListener(this);
-        mIvTitleThree.setOnClickListener(this);
+        mTvTitleOne.setOnClickListener(this);
+        mTvTitleTwo.setOnClickListener(this);
+        mTvTitleThree.setOnClickListener(this);
         mNavigationView.setNavigationItemSelectedListener(this);
     }
 
@@ -212,9 +212,9 @@ public class MusicPlayMainActivity extends BaseMusicActivity implements
                 break;
         }
         mVpContent.setCurrentItem(position);
-        mIvTitleOne.setSelected(isOne);
-        mIvTitleTwo.setSelected(isTwo);
-        mIvTitleThree.setSelected(isThree);
+        mTvTitleOne.setSelected(isOne);
+        mTvTitleTwo.setSelected(isTwo);
+        mTvTitleThree.setSelected(isThree);
     }
 
     private void toggleDrawer() {

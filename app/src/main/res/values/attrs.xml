@@ -108,4 +108,9 @@
         </attr>
         <attr format="reference" name="umanoScrollInterpolator"/>
     </declare-styleable>
+
+    <declare-styleable name="MySelectedSizes">
+        <attr name="selectedSize" format="float"/>
+        <attr name="unSelectedSize" format="float"/>
+    </declare-styleable>
 </resources>

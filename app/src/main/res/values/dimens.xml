@@ -25,8 +25,10 @@
     <dimen name="text_size_20">20.0dip</dimen>
     <dimen name="text_size_19">19.0dip</dimen>
     <dimen name="text_size_18">18.0dip</dimen>
+    <dimen name="text_size_18.67">18.67dip</dimen>
     <dimen name="text_size_17">17.0dip</dimen>
     <dimen name="text_size_16">16.0dip</dimen>
+    <dimen name="text_size_16.67">16.67dip</dimen>
     <dimen name="text_size_15">15.0dip</dimen>
     <dimen name="text_size_14">14.0dip</dimen>
     <dimen name="text_size_13">13.0dip</dimen>

@@ -33,6 +33,10 @@
     <!--<color name="white_10">#19FFFFFF</color>-->
     <color name="white_30">#4CFFFFFF</color>
 
+    <!-- title bar -->
+    <color name="title_bar_normal">#99AFE3FF</color>
+
+
     <!--页面背景的颜色-->
     <color name="color_page_bg">#F1F3F4</color>
 
