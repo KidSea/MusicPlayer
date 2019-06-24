@@ -91,6 +91,9 @@ public class MusicPlayMainActivity extends BaseMusicActivity implements
             mMainPagerAdapter.destoryAadapter();
             mMainPagerAdapter = null;
         }
+        mTvTitleOne.clearAnimation();
+        mTvTitleTwo.clearAnimation();
+        mTvTitleThree.clearAnimation();
     }
 
     @Override

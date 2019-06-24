@@ -4,6 +4,7 @@
         xmlns:bind="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools">
     <data>
+        <import type="android.view.View"/>
         <variable name="viewModel"
                   type="com.leslie.musicplayer.viewModel.localmusic.MusicViewModel"/>
     </data>
@@ -33,13 +34,13 @@
             <include
                 android:id="@+id/include_control"
                 layout="@layout/local_control_header_layout"
-                bind:showControlView="@{viewModel.mControlBean.showControlView}"
-            />
+                bind:showControlView="@{viewModel.mControlBean.showControlView}"/>
         </android.support.design.widget.AppBarLayout>
 
         <android.support.v4.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:visibility="@{viewModel.mControlBean.showControlView ? View.VISIBLE : View.GONE}"
             app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
             <com.leslie.musicplayer.widget.MusicRecyclerView
@@ -51,5 +52,13 @@
                 android:headerDividersEnabled="false"
                 bind:adapter="@{viewModel.adapter}"/>
         </android.support.v4.widget.NestedScrollView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/local_music_no_data"
+            android:textSize="@dimen/text_size_18"
+            android:visibility="@{viewModel.mControlBean.showControlView ? View.GONE : View.VISIBLE}"/>
     </android.support.design.widget.CoordinatorLayout>
 </layout>

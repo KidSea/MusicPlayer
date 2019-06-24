@@ -10,6 +10,7 @@
     <color name="music_bg_color">@color/white</color>
     <color name="white">#ffffff</color>
     <color name="black">#000000</color>
+    <color name="black_90">#e6000000</color>
     <color name="black_80">#cc000000</color>
     <color name="black_75">#bf000000</color>
     <color name="black_60">#99000000</color>
@@ -22,6 +23,7 @@
     <color name="black_10" tools:ignore="UnusedResources">#19000000</color>
     <color name="black_8">#14000000</color>
     <color name="black_5">#0D000000</color>
+    <color name="white_90">#e6FFFFFF</color>
     <color name="white_80">#ccFFFFFF</color>
     <color name="white_70">#b2FFFFFF</color>
     <color name="white_60">#99FFFFFF</color>

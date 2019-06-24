@@ -27,4 +27,5 @@
     <string name="shuffle">随机播放</string>
     <string name="local_music">本地音乐</string>
     <string name="local_empty_text">本地音乐将会在这里显示</string>
+    <string name="local_music_no_data">没有数据</string>
 </resources>

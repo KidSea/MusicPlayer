@@ -78,4 +78,5 @@
     <dimen name="common_middle_textsize">14sp</dimen>
     <dimen name="common_small_textsize">12sp</dimen>
     <dimen name="media_empty_text_size">16sp</dimen>
+    <dimen name="music_item_height">60dp</dimen>
 </resources>

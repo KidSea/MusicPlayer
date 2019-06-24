@@ -30,7 +30,7 @@ public class MusicListAdapter extends BaseRecyclerAdapter<String, MusicListAdapt
 
         public MusicListHolder(View itemView) {
             super(itemView);
-            mTextView = itemView.findViewById(R.id.music_tv);
+            mTextView = itemView.findViewById(R.id.tv_music_title);
         }
     }
 }

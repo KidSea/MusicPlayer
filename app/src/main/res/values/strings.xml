@@ -27,4 +27,5 @@
     <string name="shuffle">Shuffle</string>
     <string name="local_music">Local Music</string>
     <string name="local_empty_text">Local music will be shown here</string>
+    <string name="local_music_no_data">No Data</string>
 </resources>

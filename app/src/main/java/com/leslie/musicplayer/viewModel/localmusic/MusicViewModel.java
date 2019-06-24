@@ -3,7 +3,6 @@ package com.leslie.musicplayer.viewModel.localmusic;
 import android.app.Application;
 import android.arch.lifecycle.AndroidViewModel;
 import android.support.annotation.NonNull;
-import android.util.Log;
 
 import com.leslie.musicplayer.bean.ShowControlBean;
 import com.leslie.musicplayer.model.MusicModel;
@@ -30,7 +29,7 @@ public class MusicViewModel extends AndroidViewModel {
 
     public void requestData() {
         for (int i = 0; i < 50; i++) {
-            String s = "music" + i;
+            String s = "卡路里" + i;
             data.add(s);
         }
         adapter.addDatas(data);
