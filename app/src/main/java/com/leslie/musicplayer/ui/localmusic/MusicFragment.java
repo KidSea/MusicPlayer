@@ -29,6 +29,7 @@ public class MusicFragment extends BaseModelFragment<MusicViewModel, MusicMainFr
         mBindingView.musicListRecyclerview.setLayoutManager(layoutManager);
         mBindingView.musicListRecyclerview.setNestedScrollingEnabled(false);
         mBindingView.musicListRecyclerview.setHasFixedSize(false);
+        mBindingView.musicListRecyclerview.setItemViewCacheSize(20);
         mBindingView.musicListRecyclerview.setItemAnimator(new DefaultItemAnimator());
     }
 

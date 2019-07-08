@@ -7,11 +7,12 @@ import android.widget.TextView;
 
 import com.leslie.musicplayer.R;
 import com.leslie.musicplayer.base.BaseRecyclerAdapter;
+import com.leslie.musicplayer.bean.Song;
 
 /**
  * Created by yuxuehai on 19-3-27.
  */
-public class MusicListAdapter extends BaseRecyclerAdapter<String, MusicListAdapter.MusicListHolder> {
+public class MusicListAdapter extends BaseRecyclerAdapter<Song, MusicListAdapter.MusicListHolder> {
 
     @Override
     public MusicListHolder onCreate(ViewGroup parent, int viewType) {
@@ -21,8 +22,8 @@ public class MusicListAdapter extends BaseRecyclerAdapter<String, MusicListAdapt
     }
 
     @Override
-    public void onBind(MusicListHolder viewHolder, int RealPosition, String data) {
-        (viewHolder).mTextView.setText(data);
+    public void onBind(MusicListHolder viewHolder, int RealPosition, Song data) {
+        (viewHolder).mTextView.setText(data.getName());
     }
 
     static class MusicListHolder extends BaseRecyclerAdapter.Holder {

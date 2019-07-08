@@ -5,6 +5,7 @@ import android.arch.lifecycle.AndroidViewModel;
 import android.support.annotation.NonNull;
 
 import com.leslie.musicplayer.bean.ShowControlBean;
+import com.leslie.musicplayer.bean.Song;
 import com.leslie.musicplayer.model.MusicModel;
 import com.leslie.musicplayer.ui.localmusic.adapter.MusicListAdapter;
 
@@ -18,7 +19,7 @@ public class MusicViewModel extends AndroidViewModel {
     private static final String TAG = MusicViewModel.class.getSimpleName();
 
     private MusicModel mMusicModel;
-    private List<String> data = new ArrayList<>();
+    private List<Song> data = new ArrayList<>();
     public MusicListAdapter adapter = new MusicListAdapter();
     public ShowControlBean mControlBean = new ShowControlBean();
 
@@ -28,10 +29,7 @@ public class MusicViewModel extends AndroidViewModel {
     }
 
     public void requestData() {
-        for (int i = 0; i < 50; i++) {
-            String s = "卡路里" + i;
-            data.add(s);
-        }
+        data = mMusicModel.getAllSong();
         adapter.addDatas(data);
         mControlBean.setShowControlView(!data.isEmpty());
     }
